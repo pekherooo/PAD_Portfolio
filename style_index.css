@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --nav-bg-color: rgba(255, 255, 255, .1);
+    --bg-color: #171f2b;
+    --secondary-bg-color: #1f2733;
+    --third-bg-color: #2d3542;
+    --main-color: #0ef;
+    --white-color: #fff;
+    --tab-list-color: #7c8594;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--white-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--secondary-bg-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+}
+
+header .logo {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+header p {
+    margin: 0.3rem;
+}
+
+.slogan {
+    font-style: italic;
+    color: var(--tab-list-color);
+}
+
+.btn-download {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-download:hover {
+    transform: scale(1.05);
+}
+
+section {
+    margin: 3rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+.photo-flip {
+    perspective: 1000px;
+    width: 230px;
+    height: 300px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.photo-flip:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.photo-front, .photo-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.photo-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-back {
+    background-color: var(--third-bg-color);
+    color: var(--white-color);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+.photo-back a {
+    margin-top: 1rem;
+    color: var(--main-color);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.projects h3 {
+    margin-top: 1.5rem;
+    color: var(--white-color);
+    font-size: 1.4rem;
+}
+
+.projects p {
+    color: var(--tab-list-color);
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--third-bg-color);
+    color: var(--tab-list-color);
+    font-size: 0.95rem;
+}
+
+::selection {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 1rem;
+}
+
+::placeholder {
+    color: var(--white-color);
+}
+
+/* Responsive titles and padding */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-download {
+        padding: 0.6rem 1rem;
+    }
+
+    .photo-flip {
+        width: 180px;
+        height: 240px;
+    }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Équipe des Hacktivistes - Concours 2025</title>
+  <link rel="stylesheet" href="style_index.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header, section, footer {
+      padding: 4rem 10%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    header {
+      background: #171f2b;
+      color: #fff;
+      text-align: center;
+    }
+    .logo {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+    .btn-download {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #0ef;
+      color: #171f2b;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s;
+    }
+    .btn-download:hover {
+      transform: scale(1.05);
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #0ef;
+      margin-bottom: 1rem;
+    }
+    .members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+    gap: 2rem;
+    align-items: stretch;
+    }
+    
+    @media screen and (max-width: 768px) {
+    .members {
+        grid-template-columns: 1fr; /* 1 seule carte par ligne en petit écran */
+    }
+    }
+    .photo-flip {
+      perspective: 1000px;
+    }
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .photo-flip:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+    .photo-front, .photo-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .photo-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .photo-back {
+      background: #2d3542;
+      color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    .projects h3 {
+      margin-top: 2rem;
+      color: #333;
+    }
+    .projects p {
+      color: #555;
+    }
+    footer {
+      background: #1f2733;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem 10%;
+    }
+    @media screen and (max-width: 768px) {
+      header, section, footer {
+        padding: 3rem 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <h1>Équipe des Hacktivistes</h1>
+    <p class="slogan">Innover par la géomatique pour transformer l’éducation</p>
+    <p><strong>Hackathon PAD 2025</strong></p>
+   
+    
+  </header>
+
+  <section class="team" id="team" data-aos="fade-up">
+    <h2>Qui sommes-nous ?</h2>
+    <p>Les Hacktivistes, c’est l’alliance de quatre étudiants passionnés par la géomatique, les SIG, le développement web et l’analyse de données spatiales. Notre force : allier innovation technologique et vision territoriale.</p>
+  </section>
+
+  <section class="objectif" id="objectif" data-aos="fade-right">
+    <h2>Notre objectif</h2>
+    <p>Proposer des solutions numériques innovantes pour l’enseignement, en exploitant les technologies géospatiales au service de l’organisation scolaire et de la planification territoriale.</p>
+  </section>
+
+  <section id="membres" data-aos="zoom-in">
+    <h2>Nos membres</h2>
+  </section>
+
+  <section class="members" id="members">
+   <div class="photo-flip">
+      <div class="flip-inner">
+        <div class="photo-front">
+          <img src="../portfolio_groupe/IMAGES/WhatsApp Image 2025-06-13 à 22.04.54_91660436...jpg" alt="Fatou">
+        </div>
+        <div class="photo-back">
+          <h4>Fatou Taye NDIAYE</h4>
+          <p>Étudiante en Licence 2 Géomatique</p>
+          <a href="TAYE.html">voir plus</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-flip">
+      <div class="flip-inner">
+        <div class="photo-front">
+          <img src="../portfolio_groupe/IMAGES/ChatGPT Image 20 juin 2025, 19_45_29.png" alt="Aby">
+        </div>
+        <div class="photo-back">
+          <h4>Aby NIANG</h4>
+          <p>Étudiante en Licence 2 Géomatique</p>
+          <a href="ABY.html">voir plus</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-flip">
+      <div class="flip-inner">
+        <div class="photo-front">
+          <img src="../portfolio_groupe/IMAGES/WhatsApp Image 2025-06-20 à 20.04.19_7cc13c99...jpg" alt="Papa">
+        </div>
+        <div class="photo-back">
+          <h4>Papa Abdoulaye MBAYE</h4>
+          <p>Étudiant en Licence 2 Géomatique</p>
+          <a href="PEKH.html">voir plus</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-flip">
+      <div class="flip-inner">
+        <div class="photo-front">
+          <img src="../portfolio_groupe/IMAGES/WhatsApp Image 2025-06-20 à 19.57.47_f0413e71...jpg" alt="Mouhamet">
+        </div>
+        <div class="photo-back">
+          <h4>Mouhamet Oumar Cissokho SY</h4>
+          <p>Étudiant en Licence 2 Géomatique</p>
+          <a href="CISKO.html">voir plus</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects" data-aos="fade-up-left">
+    <h2>Nos réalisations</h2>
+
+    <h3>📘 GéoCahier</h3>
+    <p>Application web collaborative pour la gestion numérique des cahiers de textes. Elle permet aux enseignants de documenter leurs séances, aux responsables de les valider, et au chef de filière d’assurer un suivi en temps réel avec export PDF/Excel.</p>
+
+    <h3>🏢 SimuGéo – Entreprise SIG</h3>
+    <p>Prototype de gestion d’une entreprise fictive spécialisée en services géomatiques : suivi de projets, génération de cartes thématiques, gestion client et production automatisée de livrables cartographiques.</p>
+
+    <h3>🗏️ Registre des cartes démographiques</h3>
+    <p>Interface cartographique interactive centralisant des cartes thématiques du Sénégal (population, éducation, santé). Consultation par année, zoom dynamique, et filtres intelligents pour l’analyse territoriale.</p>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>Contact : fatou.taya16@gmail.com | Téléphone : +221 77 123 45 67</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
